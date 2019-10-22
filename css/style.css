@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+.container {
+  background-image: url(../img/homegb.jpg);
+  background-size: cover;
+  opacity: 0.9;
+  filter: brightness(150%);
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(221, 255, 1);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header span {
+  font-size: 80px;
+  margin-left: 30px;
+}
+header a {
+  margin-right: 30px;
+  color: rgb(221, 255, 1);
+}
+
+section {
+  height: 85vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 100%;
+  overflow:	hidden;
+  position:	relative;
+  border-radius: 30px;
+}
+
+.box img {
+  height: 100%;
+}
+
+.box .caption {
+	font-size:		40px;
+	color:			white;
+	text-align: 	center;
+	padding-top:		120px;
+}
+
+.box .mask {
+	width:			100%;
+	height:			100%;
+	position:	absolute;
+	top: 0;
+	left:	0;
+	opacity: 0;	/* 表示させない */
+	background-color: rgb(0, 0, 0);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	-webkit-transition:	all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+
+.box:hover .mask {
+	-webkit-transform:	rotateY(0deg);
+	transform:	rotateY(0deg);
+	opacity:	1;	/* ホバーで表示する */
+}
+
+section a {
+  height: 45%;
+  width: 400px;
+  margin-left: 3%;
+}
+
+footer {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  color: rgb(221, 255, 1);
+}
+
+
+@media screen and (max-width:560px) {
+  section {
+    display: flex;
+    justify-content: center;
+  }
+
+  section a{
+    margin-bottom: 20px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:767px) {
+  section {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  section a{
+    margin-bottom: 20px;
+  }
+  footer a{
+    display: none;
+  }
+}
